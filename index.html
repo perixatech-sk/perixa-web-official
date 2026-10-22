@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="dYQAEgMq8Tbitbfaf0W0Vqyp3M0Zd4McsCzQ3Y9Yba4" />
 <title>Perixa Technologies — IT Consultancy and Software Development</title>
+<meta name="robots" content="index, follow, max-image-preview:none, max-snippet:-1" />
 <meta name="description" content="Perixa Technologies builds premium software, AI systems, websites and digital products for companies who refuse to look like everyone else." />
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="canonical" href="https://perixatech-sk.github.io/" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://perixatech-sk.github.io/perixa-web-official/" />
 <meta property="og:site_name" content="Perixa Technologies" />
-<meta property="og:url" content="https://perixatech-sk.github.io/" />
-<meta property="og:image" content="https://perixatech-sk.github.io/favicon.png" />
+<meta property="og:url" content="https://perixatech-sk.github.io/perixa-web-official/" />
+<meta property="og:image" content="https://perixatech-sk.github.io/perixa-web-official/favicon.png" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebSite","@id":"https://perixatech-sk.github.io/#website","url":"https://perixatech-sk.github.io/","name":"Perixa Technologies","alternateName":["Perixa Tech","Perixa"]},
-{"@type":"Organization","@id":"https://perixatech-sk.github.io/#org","name":"Perixa Technologies","url":"https://perixatech-sk.github.io/","logo":"https://perixatech-sk.github.io/favicon.png","email":"perixatech@gmail.com","telephone":"+917904478682"}
+{"@type":"WebSite","@id":"https://perixatech-sk.github.io/perixa-web-official/#website","url":"https://perixatech-sk.github.io/perixa-web-official/","name":"Perixa Technologies","alternateName":["Perixa Tech","Perixa"]},
+{"@type":"Organization","@id":"https://perixatech-sk.github.io/perixa-web-official/#org","name":"Perixa Technologies","url":"https://perixatech-sk.github.io/perixa-web-official/","logo":"https://perixatech-sk.github.io/perixa-web-official/favicon.png","email":"perixatech@gmail.com","telephone":"+917904478682"}
 ]}
 </script>
 <meta property="og:title" content="Perixa Technologies — Intelligent Digital Experiences" />
@@ -442,6 +443,8 @@
     .contact-card{ padding:30px 22px; }
     .wa-float{ right:14px; bottom:14px; width:54px; height:54px; }
   }
+  .team-photo{ width:100%; height:100%; background-size:cover; background-position:center; transition:transform .5s cubic-bezier(.16,1,.3,1); transform:translateZ(0); }
+  .team-card:hover .team-photo-wrap .team-photo{ transform:scale(1.06); }
 </style>
 </head>
 <body>
@@ -959,7 +962,7 @@ function renderTeam(){
   const grid = document.getElementById('teamGrid');
   grid.innerHTML = TEAM.map(person=>`
     <div class="glass team-card">
-      <div class="team-photo-wrap"><img src="${person.photo}" alt="${person.name}" loading="lazy" /></div>
+      <div class="team-photo-wrap"><div class="team-photo" role="img" aria-label="${person.name}" style="background-image:url('${person.photo}')"></div></div>
       <div class="team-info">
         <div class="team-name">${person.name}</div>
         <div class="team-roles">
